@@ -1,0 +1,32 @@
+From c8b286570a4f9f8c384dc2fa006dcf6c437dd7f3 Mon Sep 17 00:00:00 2001
+From: "Brett T. Warden" <brett.t.warden@intel.com>
+Date: Mon, 12 Nov 2018 17:01:59 -0800
+Subject: [PATCH] Add SOVERSION to dmlc.so, don't install doc
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ccf0356..d7e4a63 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -142,6 +142,7 @@ if(USE_AZURE)
+ endif()
+ 
+ add_library(dmlc ${SOURCE})
++set_target_properties(dmlc PROPERTIES COMPILE_PDB_NAME dmlc SOVERSION 1)
+ target_link_libraries(dmlc ${dmlccore_LINKER_LIBS})
+ 
+ # ---[ Install Includes
+@@ -155,7 +156,6 @@ endif()
+ # ---[ Install the archive static lib and header files
+ install(TARGETS dmlc ARCHIVE DESTINATION lib${LIB_SUFFIX} LIBRARY DESTINATION lib${LIB_SUFFIX})
+ install(DIRECTORY include DESTINATION .)
+-install(DIRECTORY doc DESTINATION .)
+ 
+ # ---[ Linter target
+ if(MSVC)
+-- 
+2.19.1
+
