@@ -1,1 +1,2 @@
 0001-Add-SOVERSION-to-dmlc.so-don-t-install-doc.patch
+0002-Add-OMPException-class-and-use-it-for-Text-Parser-44.patch
