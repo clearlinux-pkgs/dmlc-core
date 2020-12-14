@@ -4,7 +4,7 @@
 #
 Name     : dmlc-core
 Version  : 0.3
-Release  : 8
+Release  : 9
 URL      : https://github.com/dmlc/dmlc-core/archive/v0.3.tar.gz
 Source0  : https://github.com/dmlc/dmlc-core/archive/v0.3.tar.gz
 Summary  : No detailed summary available
