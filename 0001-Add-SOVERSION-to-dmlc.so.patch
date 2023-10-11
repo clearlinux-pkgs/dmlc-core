@@ -1,0 +1,25 @@
+From 52b4ba83f6772bfd1dc3492b1caa53f8930b724c Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Wed, 11 Oct 2023 14:26:07 -0700
+Subject: [PATCH] Add SOVERSION to dmlc.so
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a91489c..4c5aaba 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -58,7 +58,7 @@ if(USE_AZURE)
+ endif()
+ 
+ add_library(dmlc ${SOURCE})
+-
++set_target_properties(dmlc PROPERTIES COMPILE_PDB_NAME dmlc SOVERSION 1)
+ # Sanitizer
+ if (DMLC_USE_SANITIZER)
+   # Older CMake versions have had troubles with Sanitizer
+-- 
+2.42.0
+
