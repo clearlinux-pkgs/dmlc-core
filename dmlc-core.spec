@@ -7,7 +7,7 @@
 #
 Name     : dmlc-core
 Version  : 0.5
-Release  : 15
+Release  : 16
 URL      : https://github.com/dmlc/dmlc-core/archive/v0.5/dmlc-core-0.5.tar.gz
 Source0  : https://github.com/dmlc/dmlc-core/archive/v0.5/dmlc-core-0.5.tar.gz
 Summary  : No detailed summary available
